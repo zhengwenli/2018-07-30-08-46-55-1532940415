@@ -3,7 +3,7 @@ module.exports = function main(a) {
   var sum = 0;
   while(a != 0){
     sum += a % 10;
-    a = (a / 10).toFixed(0);
+    a = (a - a % 10) / 10;
   }
   return sum;
 };
